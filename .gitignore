@@ -5,3 +5,4 @@
 cart_project/.coverage
 cart_project/media/*
 cart_project/static/*
+cart_project/cart_project/default.db
