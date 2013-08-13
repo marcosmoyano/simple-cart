@@ -2,3 +2,6 @@
 *.pot
 *.pyc
 .dir-locals.el
+cart_project/.coverage
+cart_project/media/*
+cart_project/static/*

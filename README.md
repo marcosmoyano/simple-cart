@@ -50,6 +50,7 @@ user@machine:$ workon VENV_NAME
 ```sh
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart$ cd cart_project/
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py --settings=cart_project.settings.local syncdb
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py --settings=cart_project.settings.local migrate
 
 ```
 

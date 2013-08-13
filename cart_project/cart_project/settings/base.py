@@ -199,6 +199,8 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
+    'profiles',
+    'stores',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -243,3 +245,12 @@ LOGGING = {
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 ########## END WSGI CONFIGURATION
+
+
+########## AUTH USER MODEL
+AUTH_USER_MODEL = "profiles.StoreUser"
+########## END AUTH USER MODEL
+
+LOGIN_REDIRECT_URL = "/"
+
+LOGIN_URL = '/login/'
