@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Checkout</h1>
+{% if empty %}
+<h2>Your Cart is empty.</h2>
+{% else %}
+<h2>Your Products</h2>
+
+<table cellspacing="2" cellpadding="2" border="1">
+  <tr>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Total Price</th>
+  </tr>
+{% for item in cart %}
+<tr>
+  <td>{{ item.product.name }}</td>
+  <td>{{ item.quantity }}</td>
+  <td>{{ item.total_price }}</td>
+</tr>
+{% endfor %}
+</table>
+<p>Total: {{ cart.total }}</p>
+<form method="POST" id="" action="">
+  {% csrf_token %}
+  <input type="submit" name="checkout" value="CHECKOUT" />
+</form>
+{% endif %}
+{% endblock %}

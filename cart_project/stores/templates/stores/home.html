@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Our Stores</h1>
+<ul>
+{% for store in stores %}
+<li><a href="{{ store.get_absolute_url }}">{{ store.name }}</a></li>
+{% endfor %}
+
+</ul>
+{% endblock %}
