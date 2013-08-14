@@ -1,0 +1,176 @@
+[
+{
+    "pk": 1, 
+    "model": "stores.cart", 
+    "fields": {
+        "checked_out": false, 
+        "user": 1, 
+        "creation_date": "2013-08-14T11:05:32.454Z"
+    }
+},
+{
+    "pk": 1, 
+    "model": "stores.store", 
+    "fields": {
+        "merchant": 2, 
+        "description": "Our first Store. Our business: SHOES! YEAH!", 
+        "name": "Store 1", 
+        "slug": "store-1"
+    }
+},
+{
+    "pk": 2, 
+    "model": "stores.store", 
+    "fields": {
+        "merchant": 3, 
+        "description": "Our second store. Our business: CAMERAS! Sexy isn't it?", 
+        "name": "Store 2", 
+        "slug": "store-2"
+    }
+},
+{
+    "pk": 3, 
+    "model": "stores.store", 
+    "fields": {
+        "merchant": 4, 
+        "description": "Our third Store. Our business: Cellphones. Not that sexy, I know.", 
+        "name": "Store 3", 
+        "slug": "store-3"
+    }
+},
+{
+    "pk": 1, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-1/ared.png", 
+        "description": "Bringing back a heritage hero from the archives, the adidas Originals Phantom returns with this one-to-one reissue of the early-'80s running shoe. Features retro colourways, that classic mesh upper with the suede overlays and synthetic suede heel cap, and those signature webbed 3-Stripes.", 
+        "price": "25", 
+        "slug": "phantom-synthetic-syn1", 
+        "store": 1, 
+        "name": "Phantom Synthetic (Syn1)"
+    }
+},
+{
+    "pk": 2, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-1/agreen.jpg", 
+        "description": "Inspired by the design of \u201890s running shoes, but creating a fresh look all its own, the adidas Originals Torsion Allegra is made with TORSION\u00ae support and features a sock construction in the upper, suede overlays, baseball satin underlays and welded 3-Stripes.", 
+        "price": "27", 
+        "slug": "torsion-allegra-synthetic-sock", 
+        "store": 1, 
+        "name": "Torsion Allegra Synthetic (Sock)"
+    }
+},
+{
+    "pk": 3, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-1/awhite.png", 
+        "description": "The adidas Originals Top Ten Vulc treats the classic Top Ten basketball shoe to a slimmed down look with a round toe shape and vulcanised rubber outsole. Features a leather upper with synthetic leather details and 3-Stripes, and a mesh lining.", 
+        "price": "30", 
+        "slug": "top-ten-vulc-w-leather-lea-upper-patent-details", 
+        "store": 1, 
+        "name": "Top Ten Vulc W Leather (Lea Upper + Patent Details)"
+    }
+},
+{
+    "pk": 4, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-2/D7100.png", 
+        "description": "With the newly developed Advanced Multi-CAM 3500DX autofocus sensor module, the densely located 51 focus points, supported by an algorithm equivalent to that of the D4, deliver amazing capturing power. AF detection is available down to an impressive -2 EV (ISO 100, 20\u00b0C/68\u00b0F), which is the brightness equivalent to a subject illuminated by moonlight.\r\nFifteen cross-type sensors cover the most frequently used center area. The center point performs as a cross-type sensor even at f/8. This enables AF shooting, with the effective aperture value slower than f/5.6 and faster than f/8 or at f/8 when an AF-S teleconverter is attached to the lens. For example, accurate autofocus is possible with the effective aperture value of f/8 by attaching a 2.0x teleconverter to a telephoto lens with maximum aperture of f/4. By combining a teleconverter with compact and lightweight DX-format system, you can enjoy supertelephoto AF shooting without bulky equipment and expand the photographic opportunities.\r\nFurthermore, when the image area of 1.3x crop of DX is selected, the angle of view becomes equivalent to that of a lens with about double the focal length in 35mm format. As the cropped frame is almost entirely covered by the focus points, the camera demonstrates even more powerful capturing capability.", 
+        "price": "150", 
+        "slug": "d7100", 
+        "store": 2, 
+        "name": "D7100"
+    }
+},
+{
+    "pk": 5, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-2/D5200.png", 
+        "description": "The D5200 employs newly developed Nikon DX-format CMOS sensor with 24.1 effective megapixels. Combined with the sharp depiction of NIKKOR lenses, the high resolution renders details of the subject minutely and delivers images with great definition and depth. The sensor also supports wide ISO sensitivity range, high-speed readout during live view and Full HD movie recording.\r\nThe D5200 comes equipped with image-processing engine EXPEED 3, equivalent to that of higher-end models such as the D4. It processes multiple tasks in parallel at high speed while maintaining high precision to bring out the full potential of the 24.1 megapixels for both still images and movies. The image processing of the EXPEED 3 is excellent at color reproduction, gradation processing and image quality at high sensitivity. It reproduces human skin tone, eyelashes and hair more faithfully. Furthermore, from image processing and card recording to image playback and image transfer, EXPEED 3 manages massive amounts of data at high speed. Even with high ISO noise reduction and Active D-Lighting, continuous shooting speed is not sacrificed, realizing comfortable shooting. This also contributes to energy saving.", 
+        "price": "125", 
+        "slug": "d5200", 
+        "store": 2, 
+        "name": "D5200"
+    }
+},
+{
+    "pk": 6, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-2/D3200.png", 
+        "description": "Featuring 24.2 effective megapixels, the D3200 employs a Nikon-developed DX-format CMOS image sensor. It achieves high-resolution rendering and rich tonal gradation that smoothly reproduces human skin texture and gradation of sky. Also, utilizing the large sensor of a D-SLR, high-quality still images and movies can be taken with beautiful background blur. The high pixel count of the D3200 is also effective when images are printed. Even when taken still images are trimmed and enlarged, high-resolution image quality is realized with the least degradation.\r\nTo process 24.2-megapixel data at high speed, an image-processing engine EXPEED 3, the same as that used by the Nikon D4, that is optimized for D-SLRs is incorporated. EXPEED 3 realizes faithful reproduction of human skin, expanded dynamic range and improved color rendering in Active D-Lighting. With its high-performance noise-reduction function, rich gradation with less noise is achieved even at a high sensitivity range, for both still images and movies.\r\nAlso, with high-speed readout from the image sensor integrated with superior image-processing capability, Full HD D-Movie at 1,920 x 1,080/30p is supported.\r\n", 
+        "price": "100", 
+        "slug": "d3200", 
+        "store": 2, 
+        "name": "D3200"
+    }
+},
+{
+    "pk": 7, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-3/S3.jpg", 
+        "description": "Share Back-to-Back\r\nIf sharing is your thing, the Samsung Galaxy S\u00ae III is your phone. With S Beam\u2122, you can share large HD files in seconds \u2013 just touch compatible devices back-to-back. S Beam\u2122 takes full advantage of NFC (Near-Field Communication) and Wi-Fi Direct technology, making it quick and easy for you to share photos, videos, documents, calendars, contacts and more. And you don\u2019t even need Wi-Fi\u00ae or a cellular signal.\r\nShare Big\r\nAs much as you like a crowd huddled around admiring your new phone, it won\u2019t be necessary with Samsung Link. Because now, you can play your music, videos and slide shows on any compatible HDTV or computer for all to see. Go big.\r\nShare Photos Instantly\r\nShare Shot lets you share your photos with up to five friends \u2013 as you take them. What does this mean? You don\u2019t have to remember to share later; just share on the spot and forget it. Sharing has never been so much fun, so fast or so hassle-free", 
+        "price": "100", 
+        "slug": "samsung-galaxy-s-iii-sprint-amethyst-purple", 
+        "store": 3, 
+        "name": "Samsung Galaxy S\u00ae III (Sprint), Amethyst Purple"
+    }
+},
+{
+    "pk": 8, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-3/S4.jpg", 
+        "description": "It takes a lot of things to be The Next Big Thing \u2500 5\" Full HD Super AMOLED\u2122 display, 13MP camera, touch-free way to navigate, and Easy Mode for simplified use.\r\nSlow and Fast Motion\r\nCapture every moment with Slow Motion video recording \u2013 no video editing tools necessary. Slow down or speed up all the action using the Galaxy S 4 Slow Motion and Fast Motion camera modes. Simply choose your mode, select your speed and start recording.", 
+        "price": "130", 
+        "slug": "samsung-galaxy-s-4-t-white-frost", 
+        "store": 3, 
+        "name": "Samsung Galaxy S\u00ae 4 (AT&T), White Frost"
+    }
+},
+{
+    "pk": 9, 
+    "model": "stores.product", 
+    "fields": {
+        "picture": "store-3/Note2.jpg", 
+        "description": "Truly Notable Productivity\r\nLooking for the smartphone that can do it all? The Galaxy Note II is a powerhouse of productivity. The S Pen brings the simplicity of pen and paper to innovative mobile technology, plus the ability to perform multiple tasks at once. Quickly create and edit documents, and navigate with the precision of a mouse. Use Air View to get an overview of an entire library by hovering the S Pen above the display, or boost your multitasking mileage: S Note remembers shapes, text searches and even equations.\r\nMultitasking Pop Ups\r\nGet more done with multitasking pop-ups that let you scribble a quick note (Pop Up Note), watch a movie while you work (Pop Up Video), or open an embedded link right from a message (Pop Up Browser).\r\nSamsung For Enterprise\r\nWith SAFE\u2122, Samsung layers extra features on top of native Android\u2122 to make devices more secure and easier for your employer's IT department to manage.", 
+        "price": "110", 
+        "slug": "samsung-galaxy-note-ii-verizon-titanium-gray", 
+        "store": 3, 
+        "name": "Samsung Galaxy Note\u00ae II (Verizon), Titanium Gray"
+    }
+},
+{
+    "pk": 1, 
+    "model": "stores.item", 
+    "fields": {
+        "product": 1, 
+        "cart": 1, 
+        "quantity": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "stores.item", 
+    "fields": {
+        "product": 4, 
+        "cart": 1, 
+        "quantity": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "stores.item", 
+    "fields": {
+        "product": 7, 
+        "cart": 1, 
+        "quantity": 1
+    }
+}
+]

@@ -45,12 +45,14 @@ user@machine:$ workon VENV_NAME
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart$ pip install -r requirements/local.txt
 ```
 
-### Fourth, create the local database and install the sample fixtures.
+### Fourth, create the local database and install the sample fixtures. There's also a set of images you can copy get the full fixture running.
 
 ```sh
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart$ cd cart_project/
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py syncdb --settings=cart_project.settings.local
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py migrate --settings=cart_project.settings.local
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ cp -r stores/fixtures/media/* media/
+
 
 ```
 

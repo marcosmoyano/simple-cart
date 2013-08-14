@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.conf import settings
+from django.utils.timezone import now
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
@@ -16,7 +17,8 @@ def set_product_location(instance, filename):
 
 class Cart(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_('User'))
-    creation_date = models.DateTimeField(_('Creation date'))
+    creation_date = models.DateTimeField(_('Creation date'),
+                                         default=now)
     checked_out = models.BooleanField(_('Checked out'), default=False)
 
     class Meta:

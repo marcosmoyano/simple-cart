@@ -7,15 +7,17 @@
 
 {% block content %}
 <h1>{{ store.name }}: Our Products</h1>
-<ul>
 {% for product in products %}
-<li>
+<div class="row">
+  <div class="span10">
   <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+  </div>
   {% if product.picture %}
+  <div class="span12">
     <img src="{{ product.picture.url }}" class="" alt="" />
+  </div>
   {% endif %}
-</li>
+</div>
 {% endfor %}
 
-</ul>
 {% endblock %}

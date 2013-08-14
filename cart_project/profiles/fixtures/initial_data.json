@@ -1,0 +1,241 @@
+[
+{
+    "pk": 1, 
+    "model": "profiles.storeuser", 
+    "fields": {
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2013-08-14T10:37:21.415Z", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$10000$gipVCU63LPKY$oukw3jtRm7cLYEGkrULZGpsEpKOzkvPJl3ueNC1XTKs=", 
+        "email": "admin@example.com"
+    }
+},
+{
+    "pk": 2, 
+    "model": "profiles.storeuser", 
+    "fields": {
+        "is_active": true, 
+        "is_superuser": false, 
+        "is_staff": true, 
+        "last_login": "2013-08-14T10:38:08.796Z", 
+        "groups": [], 
+        "user_permissions": [
+            [
+                "add_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "change_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "delete_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "add_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "change_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "delete_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "add_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "change_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "delete_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "add_store", 
+                "stores", 
+                "store"
+            ], 
+            [
+                "change_store", 
+                "stores", 
+                "store"
+            ], 
+            [
+                "delete_store", 
+                "stores", 
+                "store"
+            ]
+        ], 
+        "password": "pbkdf2_sha256$10000$cIyo78qS7ukT$2hvmCSS2zIo4MDdRY8ly0OqidrGcGBnznquvOJlFRYY=", 
+        "email": "merchant1@example.com"
+    }
+},
+{
+    "pk": 3, 
+    "model": "profiles.storeuser", 
+    "fields": {
+        "is_active": true, 
+        "is_superuser": false, 
+        "is_staff": true, 
+        "last_login": "2013-08-14T10:38:24.946Z", 
+        "groups": [], 
+        "user_permissions": [
+            [
+                "add_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "change_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "delete_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "add_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "change_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "delete_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "add_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "change_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "delete_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "add_store", 
+                "stores", 
+                "store"
+            ], 
+            [
+                "change_store", 
+                "stores", 
+                "store"
+            ], 
+            [
+                "delete_store", 
+                "stores", 
+                "store"
+            ]
+        ], 
+        "password": "pbkdf2_sha256$10000$j0yfDZzCXZNE$OK+NW7qPm58IFkjWEAQUdVAPVtNhjLlLfAVGppq9Obs=", 
+        "email": "merchant2@example.com"
+    }
+},
+{
+    "pk": 4, 
+    "model": "profiles.storeuser", 
+    "fields": {
+        "is_active": true, 
+        "is_superuser": false, 
+        "is_staff": true, 
+        "last_login": "2013-08-14T10:38:37Z", 
+        "groups": [], 
+        "user_permissions": [
+            [
+                "add_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "change_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "delete_cart", 
+                "stores", 
+                "cart"
+            ], 
+            [
+                "add_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "change_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "delete_item", 
+                "stores", 
+                "item"
+            ], 
+            [
+                "add_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "change_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "delete_product", 
+                "stores", 
+                "product"
+            ], 
+            [
+                "add_store", 
+                "stores", 
+                "store"
+            ], 
+            [
+                "change_store", 
+                "stores", 
+                "store"
+            ], 
+            [
+                "delete_store", 
+                "stores", 
+                "store"
+            ]
+        ], 
+        "password": "pbkdf2_sha256$10000$R94mwc5LvkWp$LAyrsxWUnvAQBuHpFfhbYIHWZpZ3wXZy2qjPIhIc0DM=", 
+        "email": "merchant3@example.com"
+    }
+}
+]

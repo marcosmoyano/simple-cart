@@ -3,6 +3,7 @@
 
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
+from datetime import timedelta
 
 
 ########## PATH CONFIGURATION
@@ -251,6 +252,12 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 AUTH_USER_MODEL = "profiles.StoreUser"
 ########## END AUTH USER MODEL
 
+########## LOGIN URLS
 LOGIN_REDIRECT_URL = "/"
 
 LOGIN_URL = '/login/'
+########## END LOGIN URL
+
+########## CART EXPIRECY
+CART_EXPIRE = timedelta(weeks=1)
+########## END CART EXPIRECY

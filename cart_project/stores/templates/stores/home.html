@@ -3,10 +3,16 @@
 {% block content %}
 
 <h1>Our Stores</h1>
-<ul>
+
 {% for store in stores %}
-<li><a href="{{ store.get_absolute_url }}">{{ store.name }}</a></li>
+<div class="row">
+  <div class="span10">
+    <a href="{{ store.get_absolute_url }}">{{ store.name }}</a>
+  </div>
+  <div class="span10">
+    {{ store.description }}
+  </div>
+</div>
 {% endfor %}
 
-</ul>
 {% endblock %}

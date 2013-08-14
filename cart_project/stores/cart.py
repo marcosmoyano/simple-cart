@@ -1,7 +1,8 @@
 #-*- coding: utf-8 -*-
 
-from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
+from django.utils.timezone import now
+from django.conf import settings
 from .models import Cart, Item
 
 
@@ -14,7 +15,10 @@ class UserCart(object):
         user = request.user
         if user:
             try:
-                cart = Cart.objects.get(user=user, checked_out=False)
+                cart = Cart.objects.get(
+                    user=user, checked_out=False,
+                    creation_date__gt=now() - settings.CART_EXPIRE
+                )
             except Cart.DoesNotExist:
                 cart = self.new(request)
         else:
@@ -28,8 +32,7 @@ class UserCart(object):
 
     def new(self, request):
         """ Create and return a new Cart instance """
-        cart = Cart(creation_date=now(),
-                    user=request.user)
+        cart = Cart(user=request.user)
         cart.save()
         return cart
 
