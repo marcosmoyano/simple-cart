@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 
-import datetime
+from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 from .models import Cart, Item
 
@@ -28,7 +28,7 @@ class UserCart(object):
 
     def new(self, request):
         """ Create and return a new Cart instance """
-        cart = Cart(creation_date=datetime.datetime.now(),
+        cart = Cart(creation_date=now(),
                     user=request.user)
         cart.save()
         return cart

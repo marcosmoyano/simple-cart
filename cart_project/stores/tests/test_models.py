@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 
-import datetime
+from django.utils.timezone import now
 from decimal import Decimal
 from django.test import TestCase
 from django.test.client import RequestFactory
@@ -34,14 +34,14 @@ class UserCartTest(TestCase):
     def test_initialize_cart(self):
         request = self.request.get("/")
         request.user = self.user
-        now = datetime.datetime.now()
+        right_now = now()
         cart = UserCart(request)
         self.assertTrue(cart.is_empty())
         db_cart = Cart.objects.get(user=self.user, checked_out=False)
         self.assertTrue(cart.cart, db_cart)
         self.assertEqual(
             cart.cart.creation_date.timetuple()[:6],
-            now.timetuple()[:6]
+            right_now.timetuple()[:6]
         )
 
     def test_add_cart(self):

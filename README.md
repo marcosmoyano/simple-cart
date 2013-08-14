@@ -49,14 +49,19 @@ user@machine:$ workon VENV_NAME
 
 ```sh
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart$ cd cart_project/
-(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py --settings=cart_project.settings.local syncdb
-(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py --settings=cart_project.settings.local migrate
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py syncdb --settings=cart_project.settings.local
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py migrate --settings=cart_project.settings.local
 
 ```
 
-### Fifth, run the local server and test the application
+### Fifth, run the test suite
+```sh
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py test --settings=cart_project.settings.test
+```
+
+### Finally, run the local server and test the application
 
 ```sh
-(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py --settings=cart_project.settings.local runserver
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py runserver --settings=cart_project.settings.local
 
 ```
