@@ -9,6 +9,7 @@ __all__ = ['StoreAdmin', 'ProductAdmin', 'ItemAdmin', 'CartAdmin']
 
 
 class CartAdmin(admin.ModelAdmin):
+    search_fields = ('user',)
     list_display = ('user', 'creation_date', 'checked_out')
     list_filter = ('checked_out', )
 
@@ -22,7 +23,7 @@ class CartAdmin(admin.ModelAdmin):
 
 
 class StoreAdmin(admin.ModelAdmin):
-
+    search_fields = ('merchant__email', 'name', 'description')
     list_display = ('name', 'merchant')
     prepopulated_fields = {"slug": ("name",)}
 
@@ -44,7 +45,9 @@ class StoreAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
+    search_fields = ('name', 'description', 'store__name')
     list_display = ('name', 'store')
+    list_filter = ('store', )
     prepopulated_fields = {"slug": ("name",)}
 
     def queryset(self, request):
@@ -67,7 +70,7 @@ class ProductAdmin(admin.ModelAdmin):
 class ItemAdmin(admin.ModelAdmin):
 
     list_display = ('cart', 'quantity', 'get_total_price')
-
+    search_fields = ('product__name', )
     def queryset(self, request):
         if request.user.is_superuser:
             return Item.objects.all()
