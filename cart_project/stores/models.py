@@ -46,13 +46,15 @@ class Store(models.Model):
     def get_absolute_url(self):
         return reverse('stores:store', kwargs={'slug': self.slug})
 
+
 class Product(models.Model):
     store = models.ForeignKey(Store,
                               verbose_name=_('Store'))
     name = models.CharField(_('Name'), max_length=255)
     slug = models.SlugField(_('Slug'), max_length=255)
     description = models.TextField(_('Description'))
-    picture = models.ImageField(_('Image'), upload_to=set_product_location)
+    picture = models.ImageField(_('Image'), upload_to=set_product_location,
+                                blank=True, null=True)
     price = models.DecimalField(_('Price'),
                                 max_digits=18, decimal_places=2)
 

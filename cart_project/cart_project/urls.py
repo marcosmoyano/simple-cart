@@ -7,7 +7,10 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^checkout$', 'profiles.views.checkout', name="checkout"),
+    url(r'^$', 'stores.views.home', name='home'),
+    url(r'^store/', include('stores.urls', namespace="stores")),
+    url(r'^checkout/$', 'profiles.views.checkout', name="checkout"),
+    url(r'^past-orders/$', 'profiles.views.past_orders', name="past_orders"),
     url(r'^logout$', 'django.contrib.auth.views.logout',
         {'next_page': '/'},
         name='logout'),
@@ -15,7 +18,6 @@ urlpatterns = patterns(
         name="login"),
     url(r'^register/$', 'profiles.views.register', name="register"),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('stores.urls', namespace="stores")),
 )
 
 

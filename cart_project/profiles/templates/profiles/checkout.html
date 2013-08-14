@@ -15,7 +15,7 @@
   </tr>
 {% for item in cart %}
 <tr>
-  <td>{{ item.product.name }}</td>
+  <td>{{ item.product.name }} (<a href="{% url 'stores:update_cart' store_slug=item.product.store.slug slug=item.product.slug %}">Edit</a>) </td>
   <td>{{ item.quantity }}</td>
   <td>{{ item.total_price }}</td>
 </tr>
@@ -26,5 +26,6 @@
   {% csrf_token %}
   <input type="submit" name="checkout" value="CHECKOUT" />
 </form>
+
 {% endif %}
 {% endblock %}

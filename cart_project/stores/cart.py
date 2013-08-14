@@ -43,11 +43,11 @@ class UserCart(object):
         except Item.DoesNotExist:
             item = Item(cart=self.cart,
                         product=product,
-                        quantity=quantity
-            )
+                        quantity=quantity)
             item.save()
         else:
-            raise ValueError(_('Item Already Exist'))
+            item.quantity += quantity
+            item.save()
 
     def remove(self, product):
         """ Remove a product from the User's Cart instance """
@@ -62,13 +62,17 @@ class UserCart(object):
             item.delete()
 
     def update(self, product, quantity):
-        """ Update the quantity of a product from the User's Cart instance """
+        """ Remove the quantity of a product from the User's Cart instance. """
         try:
-            item = Item.objects.update(
+            item = Item.objects.get(
                 cart=self.cart,
                 product=product,
-                quantity=quantity
             )
+            if quantity == 0:
+                item.delete()
+            else:
+                item.quantity = quantity
+                item.save()
         except Item.DoesNotExist:
             raise ValueError(_('Item Does not Exist'))
 

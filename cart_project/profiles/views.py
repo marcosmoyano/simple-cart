@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from stores.cart import UserCart
+from stores.models import Cart
 from .forms import StoreUserForm
 
 
@@ -16,17 +17,25 @@ def checkout(request, template="profiles/checkout.html"):
     if request.method == "POST":
         cart.checkout()
         messages.info(request, 'Your cart has been processed')
-        return HttpResponseRedirect(reverse("stores:home"))
+        return HttpResponseRedirect(reverse("home"))
     return render(request, template, {
         'cart': cart,
         'empty': cart.is_empty(),
     })
 
 
+@login_required
+def past_orders(request, template="profiles/past.html"):
+    carts = Cart.objects.select_related('items').filter(
+        user=request.user, checked_out=True
+    )
+    return render(request, template, {'carts': carts})
+
+
 def register(request, template="registration/register.html"):
     if request.user.is_authenticated():
         messages.info(request, "You are logged in already")
-        return HttpResponseRedirect(reverse("stores:home"))
+        return HttpResponseRedirect(reverse("home"))
     form = StoreUserForm(request.POST or None)
     if form.is_valid():
         user = form.save()
@@ -34,5 +43,5 @@ def register(request, template="registration/register.html"):
                             password=form.cleaned_data.get('password1'))
         login(request, user)
         messages.info(request, "Your registration has been completed")
-        return HttpResponseRedirect(reverse("stores:home"))
+        return HttpResponseRedirect(reverse("home"))
     return render(request, template, {"form": form})

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Your Previews Carts</h2>
+
+{% for cart in carts %}
+<div>
+  {{ cart.creation_date }}
+</div>
+<table cellspacing="2" cellpadding="2" border="1">
+  <tr>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Total Price</th>
+  </tr>
+{% for item in cart.items.all %}
+<tr>
+  <td>{{ item.product.name }}</td>
+  <td>{{ item.quantity }}</td>
+  <td>{{ item.total_price }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}
+
+{% endblock %}

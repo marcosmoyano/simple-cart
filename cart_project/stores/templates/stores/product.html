@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
 {% block breadcrumb %}
-<div class="breadcrumb">
   <a href="/">Top</a>&nbsp;|&nbsp;<a href="{{ store.get_absolute_url }}">{{ store.name }}</a>&nbsp;|&nbsp;<a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-</div>
 {% endblock %}
 
 {% block content %}
 
 <h1>{{ store.name }}</h1>
   <h2>{{ product.name }}</h2>
-  <img src="{{ product.picture.url }}" class="" alt="" />
+  {% if product.picture %}
+    <img src="{{ product.picture.url }}" class="" alt="" />
+  {% endif %}
   <p>{{ product.description }}</p>
   <p>Our price: {{ product.price }} $</p>
 
