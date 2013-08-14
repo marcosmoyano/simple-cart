@@ -9,6 +9,15 @@ Django Cart (sample code)
 + Contact: marcos at anue dot biz
 + Project homepage: http://github.com/marcosmoyano/simple-cart
 
+## Approach
+### Highlights
++ There's a single active Cart per-user across all Stores.
++ The Cart is active, if not closed (checked out), for a period of 1 week.
++ After that period, the cart is no longer active and a new Cart is created upon request.
++ The Cart expiry time frame can be changed from the settings directives.
++ Users can add and update products from their active cart as they move across stores.
+
+
 ## Install
 
 ### First, create the virtualenv where you will be placing the project. Virtualenv and Pip are your friends.

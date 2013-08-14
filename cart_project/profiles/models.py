@@ -7,7 +7,7 @@ from django.contrib.auth.models import (
 )
 
 
-__all__ = ['StoreUser', ]
+__all__ = ['StoreUser', 'StoreUserManager']
 
 
 class StoreUserManager(BaseUserManager):

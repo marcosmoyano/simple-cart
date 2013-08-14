@@ -258,6 +258,6 @@ LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = '/login/'
 ########## END LOGIN URL
 
-########## CART EXPIRECY
+########## CART EXPIRY
 CART_EXPIRE = timedelta(weeks=1)
-########## END CART EXPIRECY
+########## END CART EXPIRY
