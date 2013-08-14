@@ -58,8 +58,9 @@ user@machine:$ workon VENV_NAME
 
 ```sh
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart$ cd cart_project/
-(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py syncdb --settings=cart_project.settings.local
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py syncdb --noinput --settings=cart_project.settings.local
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py migrate --settings=cart_project.settings.local
+(PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ mkdir media
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ cp -r stores/fixtures/media/* media/
 
 
@@ -87,7 +88,7 @@ user@machine:$ workon VENV_NAME
 + Big Fat Disclaimer: This hasn't been tested.
 
 ```
-RewriteCond %{HTTP_HOST} ^(www\.)?example\.com$
-RewriteRule ^store([^/.]+)(/._)?$ http://$1.example.com$2 [L,R=301]
+RewriteCond %{HTTP*HOST} ^(www\.)?example\.com$
+RewriteRule ^store/([\w-]+)(/.*)?$ http://$1.example.com$2 [L,R=301]
 ```
 ```
