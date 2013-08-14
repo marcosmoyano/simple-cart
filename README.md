@@ -11,7 +11,9 @@ Django Cart (sample code)
 
 ## Approach
 ### Highlights
-+ There's a single active Cart per-user across all Stores.
++ There's a single active Cart per-user across all Stores. Why? I just thought it was a better
+approach than doing a Cart per-user per-store. After you've looked at the code,
+it'll become clear that it would be just a hard (or easy) to go one way or the other.
 + The Cart is active, if not closed (checked out), for a period of 1 week.
 + After that period, the cart is no longer active and a new Cart is created upon request.
 + The Cart expiry time frame can be changed from the settings directives.
@@ -92,3 +94,6 @@ RewriteCond %{HTTP*HOST} ^(www\.)?example\.com$
 RewriteRule ^store/([\w-]+)(/.*)?$ http://$1.example.com$2 [L,R=301]
 ```
 ```
+
+## TODO
++ Let Merchants use a custom template to customize their own pages. I forgot about this and now I'm out of time.
