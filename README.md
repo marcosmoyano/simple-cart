@@ -54,7 +54,7 @@ user@machine:$ workon VENV_NAME
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart$ pip install -r requirements/local.txt
 ```
 
-### Fourth, create the local database and install the sample fixtures. There's also a set of images you can copy get the full fixture running.
+### Fourth, create the local database and install the sample fixtures. There's also a set of images you can copy to get the full fixture running.
 
 ```sh
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart$ cd cart_project/
@@ -75,4 +75,19 @@ user@machine:$ workon VENV_NAME
 ```sh
 (PROJECT_NAME)user@machine:VIRTUAL_ENV/simple-cart/cart_project$ ./manage.py runserver --settings=cart_project.settings.local
 
+```
+
+## App Info
++ Admin (/admin/)
+++ Superuser: admin@example.com/admin
+++ Merchants: merchant1@example.com/merchant1 - merchant2@example.com/merchant2 - merchant3@example.com/merchant3
+
+
+## Handling subdomains via Apache
++ Big Fat Disclaimer: This hasn't been tested.
+
+```
+RewriteCond %{HTTP_HOST} ^(www\.)?example\.com$
+RewriteRule ^store([^/.]+)(/._)?$ http://$1.example.com$2 [L,R=301]
+```
 ```
